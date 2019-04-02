@@ -14,7 +14,8 @@
     "mithril": "^1.1.6"
   },
   "devDependencies": {
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "eslint": "^5.16.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }
