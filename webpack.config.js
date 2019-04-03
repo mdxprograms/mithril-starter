@@ -1,6 +1,6 @@
-const { resolve } = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   context: resolve(__dirname, "src"),
@@ -23,40 +23,42 @@ module.exports = {
       },
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[name].[ext]',
-          publicPath: '../fonts/',
-          outputPath: 'fonts/',
-        },
+          name: "[name].[ext]",
+          publicPath: "../fonts/",
+          outputPath: "fonts/"
+        }
       },
       {
         test: /\.(png|jpg|gif)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-          name: '[name].[ext]',
-          publicPath: '../images/',
-          outputPath: 'images/'
+          name: "[name].[ext]",
+          publicPath: "../images/",
+          outputPath: "images/"
         }
       },
       {
         test: /\.js$/,
-        include: resolve(__dirname, 'src/'),
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/env'],
+        include: resolve(__dirname, "src/"),
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/env"]
+            }
           }
-        }]
+        ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: "./index.html"
     }),
     new webpack.ProvidePlugin({
-      m: 'mithril', //Global access
+      m: "mithril" //Global access
     }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
@@ -66,10 +68,10 @@ module.exports = {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
+          name: "vendors",
+          chunks: "all"
         }
       }
     }
   }
-}
+};
