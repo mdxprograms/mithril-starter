@@ -1,4 +1,4 @@
-## Mithril Starter
+# Mithril Starter
 ![mithriljs](https://avatars2.githubusercontent.com/u/19475707?s=280&v=4)
 
 
