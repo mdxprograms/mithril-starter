@@ -13,7 +13,7 @@
 ### Build
 `npm run build`
 
-### Site structure
+### App structure
 
 ```bash
 src
